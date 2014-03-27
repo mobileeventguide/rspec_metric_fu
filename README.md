@@ -16,9 +16,40 @@ Or install it yourself as:
 
     $ gem install rspec_metric_fu
 
-## Usage
+You will want to write a '.metrics' file with this content:
 
-TODO: Write usage instructions here
+```ruby
+MetricFu::Configuration.run do |config|
+  config.configure_metric(:rcov) do |rcov|
+    rcov.coverage_file = MetricFu.run_path.join("coverage/rcov/rcov.txt")
+    rcov.enable
+    rcov.activate
+  end
+end
+```
+
+and add these lines to your 'spec/spec_helper.rb'
+
+```ruby
+require 'rspec_metric_fu'
+RspecMetricFu::Coverage.start
+```
+
+## Usage
+To get awesome metrics, first run:
+
+```bash
+bundle exec rspec
+```
+
+and then:
+
+```bash
+bundle exec metric_fu
+```
+
+## Summary
+![Before and After](https://s3-eu-west-1.amazonaws.com/uploads-eu.hipchat.com/13350/44658/LYjOTsDby0P8LkN/one_does_not_simply_walk_into_more_doors-92925.jpg)
 
 ## Contributing
 
