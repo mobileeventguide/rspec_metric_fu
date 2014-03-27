@@ -31,6 +31,11 @@ Gem::Specification.new do |spec|
     end
   end
 
+  and add these two lines too your spec_helper:
+
+  require 'rspec_metric_fu'
+  RspecMetricFu::Coverage.start
+
   *** Fin ***
   }
 
