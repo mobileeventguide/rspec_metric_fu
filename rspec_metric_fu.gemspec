@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Nick Thomas"]
   spec.email         = ["nick.thomas@mobileeventguide.de"]
   spec.summary       = %q{metric_fu includes for our spec_helper}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/mobileeventguide/rspec_metric_fu"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
